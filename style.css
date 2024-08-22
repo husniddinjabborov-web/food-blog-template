@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header */
+
+header {
+    max-width: 1180px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header button {
+    background-color: white;
+    border: none;
+    font-size: x-large;
+    padding: 10px 15px;
+    display: inline-block;
+}
+header button:hover {
+    background-color: #ddd;
+}
+header h1{
+    font-weight: normal;
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+header h2 {
+    font-weight: normal;
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* main */
+
+main {
+    max-width: 1180px;
+    margin: auto;
+    padding: 15px;
+}
+
+
+/* aside */
+
+.menu-btn {
+    padding: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    display: none;
+}
+aside {
+    position: fixed;
+    top: 0;
+    left: -40%;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #ddd;
+    opacity: 0;
+}
+input[type="checkbox"]:checked ~ aside {
+    left: 0;
+    opacity: 1;
+}
+
+
+aside a,
+aside label {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 25px;
+    font-size: x-large;
+}
+
+aside a:hover,
+aside label:hover {
+    background-color: #ddd;
+}
+/* container */
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 25px 15px;
+}
+
+.container .container-item {
+    flex: 0 0 calc(25% - 15px);
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.container .container-item .container-img img {
+    width: 100%;
+    height: auto;
+}
+
+.container .container-item .container-body {
+    text-align: center;
+}
+
+.container .container-item .container-body h2 {
+    font-weight: 100;
+    padding: 8px 0;
+}
+
+.container .container-item .container-body p {
+    padding: 8px 0;
+    line-height: 1.3;
+}
+
+
+/* banner */
+.banner .sled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.banner .sled .sled-item {
+    color: black;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.banner .sled .sled-item:hover {
+    background-color: black;
+    color: white;
+}
+
+.banner .sled .sled-item:nth-child(2) {
+    background-color: black;
+    color: white;
+}
+
+.banner .sled .sled-item:nth-child(2):hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* about */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.about h2 {
+    padding: 35px;
+    font-weight: 100;
+}
+
+.about h2 img {
+    display: block;
+    padding: 20px;
+}
+
+
+/* who */
+.who {
+    text-align: center;
+    padding: 25px 0;
+}
+
+.who h2 {
+    padding: 8px 16px;
+}
+
+.who em {
+    padding: 8px 16px;
+    display: inline-block;
+}
+
+.who p {
+    padding: 8px 16px;
+    line-height: 1.4;
+}
+
+/* footer */
+
+footer {
+    max-width: 1180px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+footer ul,
+footer ol {
+    flex: 0 0 30%;
+    list-style-type: none;
+}
+
+footer ul li h2,
+footer ol li h2 {
+    font-weight: normal;
+    padding: 8px 0;
+}
+
+footer ul li p {
+    padding: 8px 0;
+    line-height: 1.3;
+}
+
+footer ul li p a {
+    color: black;
+}
+
+
+footer ul:nth-child(2) li:not(:first-child) {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+    padding: 16px 12px;
+    width: 100%;
+}
+
+footer ul li img {
+    width: 50px;
+}
+
+footer ul:nth-child(2) li:not(:first-child):hover {
+    background-color: #ddd;
+}
+
+footer ul li .hdr {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+footer ul li .hdr h4 {
+    font-weight: 100;
+}
+
+
+
+footer ol li span {
+    background-color: gray;
+    padding: 3px 5px;
+    color: white;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+footer ol li span:first-child {
+    background-color: black;
+    padding: 5px 5px;
+}
+@media (max-width: 768px) {
+    aside {
+        left: -290px;
+        width: 290px;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 25px 0;
+    }
+
+    .container .container-item {
+        flex: 1 1 100%;
+    }
+
+    /* about */
+
+    .about img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* footer */
+    footer ul,
+    footer ol {
+        padding: 5px 20px;
+        flex: 1 1 100%;
+    }
+
+}
